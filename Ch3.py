@@ -1,2 +1,5 @@
-message = "Hello this is a practice message for print"
-print(message)
+# Lists 
+
+bicyles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+
