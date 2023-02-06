@@ -21,3 +21,11 @@ print(messageA)
 print(messageB)
 print(messageC)
 print(messageD)
+
+## sort and reverse 
+cars = ['bmw', 'audi', 'toyota', 'honda']
+print(cars)
+cars.reverse()
+print(cars)
+cars.sort()
+print(cars)
