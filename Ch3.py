@@ -29,3 +29,34 @@ cars.reverse()
 print(cars)
 cars.sort()
 print(cars)
+
+
+##sorted method, finding length 
+cars = ['bmw', 'audi', 'toyota', 'honda']
+print(cars)
+
+print("\n Here is the sorted list:")
+print(sorted(cars))
+
+print("\n Here is the origial list:")
+print(cars)
+
+len(cars)
+
+##Try it yourself (Worlds)
+Worlds = ['Laos', 'Germany', 'Guetamala', 'England', 'Poland']
+print(Worlds)
+
+
+
+print(sorted(Worlds))
+
+print(" \n printing original")
+print(Worlds)
+
+
+Worlds = ['Laos', 'Germany', 'Guetamala', 'England', 'Poland']
+print(sorted(Worlds))
+
+Worlds.reverse()
+print(Worlds)
