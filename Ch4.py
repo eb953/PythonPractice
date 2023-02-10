@@ -47,3 +47,67 @@ for animal in animals:
         print(f"This animal is also part of the mammal class \n")
 print("Any of these animals would make a great pet!")
 
+## range to generate a series of numbers
+
+for value in range(1,6):
+    print(value)
+
+## create list of numbers using range 
+numbers = list(range(1,6))
+print(numbers)
+
+## skip numbers 
+
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+
+## more numbers 
+squares = []
+for value in range(1,11):
+    square = value ** 2
+    squares.append(square)
+
+print(squares)
+
+## shorten syntax, remove temporary variable 
+
+squares = []
+for value in range(1,11):
+    squares.append(value ** 2)
+print(squares) 
+
+## list comprehensions 
+
+squares = [value ** 2 for value in range(1,11)]
+print(squares)
+
+
+## Try excercise 
+
+#print counting to 20 
+for value in range(1,21):
+    print(value)
+
+# make a list from 1 to 1 million
+big_numbers = list(range(1,1000001))
+print(big_numbers)
+
+min(big_numbers)
+max(big_numbers)
+sum(big_numbers)
+
+# odd number list 
+odd_numbers = list(range(1,21,2))
+for odd_number in odd_numbers:
+    print(odd_number)
+
+# threes
+triples = list(range(3,30,3))
+for triple in triples:
+    print(triple)
+
+# cubes - make sure to create empty list first 
+numbers = []
+for values in range(1,11):
+    numbers.append(values ** 3)
+print(numbers)
