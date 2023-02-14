@@ -111,3 +111,13 @@ numbers = []
 for values in range(1,11):
     numbers.append(values ** 3)
 print(numbers)
+
+# try list comprehension
+numbers = [value**3 for value in range(1,11)]
+print(numbers)
+
+
+## slicing a list - specify the first and last elements that wants to be worked with
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[1:4])
+
