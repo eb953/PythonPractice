@@ -188,7 +188,7 @@ for friend_pizza in friend_pizzas:
     print("\nMy friend's favorite pizzas are:")
     print(friend_pizzas)
 
-## Tuples = immutable, a list of items that cannot change 
+## Tuples = immutable, a list of items that cannot change - can define them by using set of paranthesis versus brackets 
 
 dimensions = (220,50)
 print(dimensions[0])
@@ -198,6 +198,38 @@ print(dimensions[1])
 dimensions = (220,50)
 for dimension in dimensions: 
     print(dimension)
+
+dimensions = (220,50)
+print("Original dimensions:")
+for dimension in dimensions: 
+    print(dimension)
+
+dimensions = (400,98)
+print("\nModified dimensions:")
+for dimension in dimensions: 
+    print(dimension)
+
+
+## Try it with buffet 
+buffet_foods = ('crab', 'pizza', 'ice cream', 'salad', 'steak')
+print("buffet style food:")
+for buffet_food in buffet_foods:
+    print(buffet_food)
+
+##try modify tuple - will produce error 
+buffet_foods[0] = 'chicken'
+
+## modify tuple by rewriting tuple 
+buffet_foods = ('crab', 'pizza', 'ice cream', 'salad', 'steak')
+print("buffet style food:")
+for buffet_food in buffet_foods:
+    print(buffet_food)
+
+buffet_foods = ('crab', 'pizza', 'ice cream', 'porkchops', 'chicken')
+print("\nupdated buffet style food:")
+for buffet_food in buffet_foods:
+    print(buffet_food)
+
 
 
 
