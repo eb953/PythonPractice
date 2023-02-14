@@ -121,3 +121,86 @@ print(numbers)
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[1:4])
 
+## looping through a slice 
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+for player in players[:5]:
+    print(player.title())
+
+## copying a list 
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+print("\nMy favorite foods are:")
+print(my_foods)
+
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+## use append to add to copy list 
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print("\nMy favorite foods are:")
+print(my_foods)
+
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+
+## Try it yourself 
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("\nThe first three items in the list are:")
+print(players[0:3])
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("\nThe middle three items in the list are:")
+print(players[1:4])
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("\nThe last three items in the list are:")
+print(players[2:5])
+
+
+my_pizzas = ['cheese', 'artichoke', 'crab']
+friend_pizzas = my_pizzas[:]
+
+my_pizzas.append('margherita')
+friend_pizzas.append('bbq')
+
+print("\nMy faborite pizzas are:")
+print(my_pizzas)
+
+print("\nMy friend's favorite pizzas are:")
+print(friend_pizzas)
+
+for my_pizza in my_pizzas:
+    print("\nMy faborite pizzas are:")
+    print(my_pizzas)
+
+for friend_pizza in friend_pizzas:
+    print("\nMy friend's favorite pizzas are:")
+    print(friend_pizzas)
+
+## Tuples = immutable, a list of items that cannot change 
+
+dimensions = (220,50)
+print(dimensions[0])
+print(dimensions[1])
+
+## looping through all values in a tuple
+dimensions = (220,50)
+for dimension in dimensions: 
+    print(dimension)
+
+
+
+
+
+
