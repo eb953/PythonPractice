@@ -18,3 +18,6 @@ car == 'audi'
 # no longer case sensitive 
 car = 'Audi'
 car.lower() =='audi'
+
+car = 'Bmw'
+car.lower() =='bmw'
