@@ -15,9 +15,24 @@ car == 'bmw'
 car = 'audi'
 car == 'audi'
 
-# no longer case sensitive 
-car = 'Audi'
-car.lower() =='audi'
 
-car = 'Bmw'
-car.lower() =='bmw'
+##numerical comparisons 
+answer = 17
+if answer != 42: 
+    print("THat is not the correct answer. Please try again")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
