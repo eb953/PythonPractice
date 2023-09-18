@@ -85,7 +85,42 @@ else:
     
 print(f"Your admission price is ${price}.")
 
+requested_topping = ['mushrooms', 'extra cheese']
 
-
-
+if 'mushrooms' in requested_topping: 
+    print("Adding mushrooms")
+if 'extra cheese' in requested_topping:
+    print("Adding extra cheese")
+if 'pepperoni' in requested_topping:
+    print("Adding pepperoni")
     
+print("\nFinished making your pizza!")
+
+
+## test if statement 
+
+##pass
+alien_color = ['green', 'yellow', 'red']
+
+if 'green' in alien_color:
+    print("The player has earned 5 points!")
+
+
+#fail
+alien_color = ['green', 'yellow', 'red']
+
+if 'orange' in alien_color:
+    print("The player has earned 5 points!")
+else:
+    print("The player gained 0 points")
+    
+#Alien colors 2 if else
+
+alien_color = ['green', 'yellow', 'red']
+
+if 'orange' in alien_color:
+    print("The player has earned 5 points for shooting the alien!")
+else:
+    print("The player has earned 10 points")
+    
+
