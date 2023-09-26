@@ -101,3 +101,36 @@ for name in favorite_languages.keys():
         language = favorite_languages[name].title()
         print(f"\t{name.title()}, I see you love {language}!")
     
+
+
+
+
+##keys() method returns a list of keys without their values ie. favorite_languages.keys() 
+#values() method returns a list of values without their keys   ie. favorite_languages.values()     
+## A set is a collection in which each item must be unique 
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+    
+    
+##Rivers
+
+Major_Rivers = {
+    'nile': 'egypt',
+    'Rio Grande': 'mexico',
+    'Chang': 'china',
+    'Amazon': 'brazil',
+    }
+for river in Major_Rivers.values():
+    print(river.title())
+
+
+##for river, country in Major_Rivers.items():
+    ##print(f"The {river.title()} is a river that runs through this country, {country.title()} ")
