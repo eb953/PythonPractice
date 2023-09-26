@@ -43,3 +43,61 @@ else:
 #the new position is the old position plus the increment
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print(f"The new alien position is {alien_0['x_position']}")
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+
+#Dictionary of similar objects 
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }   
+
+language = favorite_languages['sarah'].title() 
+print(f"Sarah's favorite language {language}")
+
+
+##test
+Wooster = {
+    'first_name': 'Eric',
+    'last_name': 'Banavong',
+    'age': 25,
+    }
+print(Wooster)
+print(f"The person's first name that lives in wooster is {Wooster['first_name']}")
+print(f"The person's last name that lives in wooster is {Wooster['last_name']}")
+print(f"The person's age that lives in wooster is {Wooster['age']}")
+
+
+
+
+
+for name, value in Wooster.items():
+    print(f"\nName: {name}")
+    print(f"Value: {value}")
+    
+    
+    
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+#if 'erin' not in favorite_languages.keys():
+       # print("Erin, please take our poll!")
+
+friends = ['phil', 'sarah']
+for name in favorite_languages.keys():
+    print(name.title())
+    
+    if name in friends: 
+        language = favorite_languages[name].title()
+        print(f"\t{name.title()}, I see you love {language}!")
+    
