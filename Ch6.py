@@ -190,4 +190,28 @@ print("...")
 
 print(f"Total number of aliens: {len(aliens)}")
 
+#a list in a dictionary 
 
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+
+print(f"You orderd a {pizza['crust']}-crust pizza "
+      "with the follwing toppings:")
+for topping in pizza['toppings']:
+    print("\t" + topping)
+    
+#You can nest a list inside a dictionary any time you want more than one value to be associated with a single key in a dictionary
+
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+}
+
+for name, languages in favorite_languages.items(): 
+    print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
