@@ -69,3 +69,38 @@ else:
     print(f"\nThe number {isMultiple} is not a multiple of 10")
 
 
+
+##Introducing while Loops: for loop takes a collection of items and executes a block of code once for each item in the collection
+## The while loop runs as long as, or while, a certain condition is true 
+
+current_number = 1
+while current_number <=10: 
+    print(current_number)
+    current_number += 2
+    
+
+prompt = "\nTell me something, and I will repeat it back to you: "
+prompt += "\nEnter 'quit' to end the program: "
+
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    print(message)
+    
+## how to get rid of program printing out the word 'quit' as if it were an actual message 
+
+current_number = 1
+while current_number <=10: 
+    print(current_number)
+    current_number += 2
+    
+
+prompt = "\nTell me something, and I will repeat it back to you: "
+prompt += "\nEnter 'quit' to end the program: "
+
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    
+    if message != 'quit':
+        print(message)
