@@ -122,7 +122,7 @@ while active:
     else:
         print(message)
         
-##break
+##break statement directs the flow of your program; you can use it to control which lines of code are executed and which aren't so the program only executes code that you want it to, when you want it to 
         
 prompt = "\nPlease enter the name of a city you have visited: "
 prompt += "\n(Enter 'quit' when you are finished )"
@@ -135,4 +135,47 @@ while True:
     else:
         print(f"I'd love to go to {city.title()}")
         
+#Using Continue in a loop - Instead of breaking out of a loop entirely without executing the rest of its code, you can use the continue statement to return to the beginning of the loop
+
+current_number = 0
+while current_number < 10: 
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    
+    print(current_number)
+
+##Try yourself 
+
+
+##
+prompt = "Tell me a pizza topping, and I will add it to your pizza: "
+prompt += "\n(Enter 'quit' when you are finished )"
+
+while True:
+    topping = input(prompt)
+    
+    if topping == 'quit':
+        break
+    else:
+        print(f"{topping.title()} will be added to your pizza")
         
+
+prompt = "The movie theater charges different ticket prices based on your age: "
+prompt += "\n(Enter 'quit' when you are done inputting)"
+
+question = "what is your age"
+
+while True:
+    age = input(question)
+    age = int(age)
+    
+    if age == 'quit':
+        break
+    elif age < 3:
+        print("The ticket is free")
+    elif age > 3 and age < 12:
+        print("The ticket is $10")
+    else:
+        print("The ticket is $15")
+
