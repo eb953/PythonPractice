@@ -179,3 +179,75 @@ while True:
     else:
         print("The ticket is $15")
 
+## Using a while loop with lists and dictionaries 
+
+#Start with users that need to be verified and an empty list to hold confirmed users 
+
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+#verify each user until there are no more unconfirmed users - move each verified user into the list of confiremd user s 
+
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()
+    print(f"\nVerifying user: {current_user.title()}")
+    confirmed_users.append(current_user)
+    
+    #display all confirmed users
+    print("\nThe following users have been confirmed: ")
+    for confirmed_user in confirmed_users: 
+        print(confirmed_user.title())
+        
+        
+## Removing all instances of Specific Values from a list: 
+# to remove all instances of a value you can run a while loop until value is no longer in the list 
+
+
+pets = ['dog', 'cat','dog','goldfish','cat','rabbit', 'cat']
+print(pets)
+
+while 'cat' in pets: 
+    pets.remove('cat')
+    
+print(pets)
+
+##Filling a dictionary with User Input 
+responses = {}
+
+#set a flag to indicate that polling is active 
+
+polling_active = True 
+
+while polling_active:
+    #prompt for the person's name and repsonse
+    name = input("\nWhat is your name? ")
+    response = input("Which mountatin would you like to climb someday?")
+    
+    #store the response in the dictionary 
+    responses[name] = response 
+    
+    #find out if anyone else is going to take the poll
+    repeat = input("would you like to let another person respond? (yes/no) ")
+    if repeat == 'no':
+        polling_active = False
+        
+#polling is complete. show the results
+print("\n--- Poll Results ----")
+for name, response in responses.items():
+    print(f"{name} would like to climb {response}.")
+    
+##Try it yourself 
+
+sandwich_orders = ['Philly','BLT','Sausage','Italian']
+print(sandwich_orders)
+finished_sandwiches = [] 
+
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+    print(f"I made your {current_sandwich.title()} sandwich")
+    finished_sandwiches.append(current_sandwich)
+    
+print(f"\nThe follwing sandwiches have been made: ")
+for current_sandwich in finished_sandwiches:
+    print(current_sandwich.title())
