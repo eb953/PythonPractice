@@ -271,3 +271,25 @@ print(f"\nThe follwing sandwiches have been made: ")
 for current_sandwich in finished_sandwiches:
     print(current_sandwich.title())
 
+
+##Try it yourself - Dream Vacation 
+
+answer = {}
+
+polling_active = True 
+
+while polling_active:
+    name = input("what is your name?")
+    location = input("If you could visit one place in the world, where would you go? ")
+    
+    answer[name] = location
+    
+    repeat = input("Would you like anyone else to take this poll? (Yes/No)")
+    if repeat == 'no':
+        polling_active = False
+        
+print("\n-----Poll Results------")
+for name, location in answer.items():
+    print(f"{name} would like to travel to {location}")
+    
+    
