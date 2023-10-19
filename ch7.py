@@ -251,3 +251,23 @@ while sandwich_orders:
 print(f"\nThe follwing sandwiches have been made: ")
 for current_sandwich in finished_sandwiches:
     print(current_sandwich.title())
+    
+##Continue with no pastrami 
+sandwich_orders = ['Philly','pastrami', 'BLT','Sausage','pastrami','Italian','pastrami']
+print(sandwich_orders)
+finished_sandwiches = [] 
+print('We have unfortunately run out of pastrami')
+
+
+while 'pastrami' in sandwich_orders:
+     sandwich_orders.remove('pastrami')
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+    print(f"I made your {current_sandwich.title()} sandwich")
+    finished_sandwiches.append(current_sandwich)
+    
+print(f"\nThe follwing sandwiches have been made: ")
+for current_sandwich in finished_sandwiches:
+    print(current_sandwich.title())
+
