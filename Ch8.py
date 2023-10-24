@@ -110,3 +110,42 @@ def make_shirt(text, shirt_size = 'medium'):
 make_shirt('I love New York') 
 
 
+def describe_city(city_name, country='Iceland'):
+    """Display information about location"""
+    print(f"\n{city_name.title()} is in {country.title()}.")
+    
+describe_city('New York', country='USA')
+
+##Return Vlaues - the value a function returns is called a return value. The return statement takes a value from isnide a function and sends it back to the line that called the function. Return values allow yuou to move much of your program's grunt work into functions, which can simplify the body of your program 
+
+def get_formated_name(first_name, last_name):
+    """Return a full name, neatly formated"""
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+musician = get_formated_name('Eric', 'Banavong')
+print(musician)
+
+##making an argument optional -> set the parameter to an empty string ('')
+
+def get_formated_name(first_name, last_name, middle_name = ''):
+    """return a full name, neatly formated"""
+    if middle_name:
+        full_name = f"{first_name} {middle_name} {last_name}"
+    else: 
+        full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+musician = get_formated_name(first_name='Eric', middle_name='robert', last_name='Banavong')
+print(musician)
+
+def get_formated_name(first_name, last_name, middle_name = ''):
+    """return a full name, neatly formated"""
+    if middle_name:
+        full_name = f"{first_name} {middle_name} {last_name}"
+    else: 
+        full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+musician = get_formated_name(first_name='Eric', last_name='Banavong')
+print(musician)
