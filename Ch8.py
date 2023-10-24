@@ -72,3 +72,41 @@ describe_pet('dog','willie')
 print(pet_type)
 
 #for above attempting to add arguments into list 
+
+## Order Matters in a positional argument 
+
+# don't switch arguments describe_pet('hamster', 'harry') and describe_pet('harry', 'hamster')
+
+##Keyword Arguments - a name value pair that you pass to a function -> free you from having to worry about correctly ordering your arguments in the function call and they clarify the role of each value in the function call. 
+
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet"""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+    
+describe_pet(animal_type='hamster',pet_name='harry')
+
+
+#default values - if an argument for a parameter is provided in the function call, python uses the argument value. if not it uses the parameters default value 
+#When you use default values, any parameter with a default value needs to be listed after all the parameters that don't have defaulrt values. This allows python to continue interpreting postional arguments correctly 
+
+
+def describe_pet(pet_name, animal_type = 'dog'):
+    """Display information about a pet"""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+    
+describe_pet('Eric') 
+
+
+##Try it yourself 
+
+
+def make_shirt(text, shirt_size = 'medium'): 
+    """Display Information about shirt"""
+    print(f"\nThe size of my shirt is {shirt_size}.")
+    print(f"My shirt reads, {text}")
+    
+make_shirt('I love New York') 
+
+
