@@ -170,19 +170,6 @@ musician = build_person('Eric','banavong', age = 25)
 
 ## Using a function with a while loop 
 
-def get_formated_name(first_name, last_name): 
-    """return a full name, neatly formated"""
-    full_name = f"{first_name} {last_name}"
-    return full_name.title()
-
-while True: 
-    print("\nPlease tell me your name: ")
-    f_name = input("first name: ")
-    l_name = input("last name: ")
-    
-    formated_name = get_formated_name(f_name, l_name)
-    print(f"\nHello, {formated_name}")
-    
 ## above is an infinite while loop - need to insert a break 
 
 def get_formated_name(first_name, last_name): 
@@ -202,3 +189,23 @@ while True:
         break 
     formated_name = get_formated_name(f_name, l_name)
     print(f"\nHello, {formated_name}")
+
+
+##Try it yourself 
+
+def city_country(city, country): 
+    full_name = f" {city}, {country}"
+    return full_name.title() 
+    
+while True: 
+    print("\nPlease enter a city and country")
+    print("(enter 'q' at any time to quit)")
+    
+    c_name = input("city name: ")
+    if c_name == 'q': 
+        break 
+    country_name= input("country name: ")
+    if country_name == 'q':
+        break 
+    
+    print(f"\n{c_name}, {country_name}")
