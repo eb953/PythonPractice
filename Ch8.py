@@ -209,3 +209,34 @@ while True:
         break 
     
     print(f"\n{c_name}, {country_name}")
+    
+##Try it yourself - make album 
+
+def make_album(artist_name, album_title, num_songs = 'None'): 
+    album = {'Name': artist_name, 'Album Title': album_title}
+    if num_songs:
+        album['Number songs'] = num_songs
+    return album 
+    
+while True: 
+    print("\nPlease enter a album information")
+    print("(enter 'q' at any time to quit)")
+    
+
+    i_artist_name = input("artist name: ")
+    if i_artist_name == 'q':
+        break 
+    
+    i_album_title = input("Album Title: ")
+    if i_album_title == 'q':
+        break 
+    
+    i_num_songs = input('Number songs: ')
+    if i_num_songs == 'q':
+        break 
+    
+    formatted_album = make_album(i_artist_name, i_album_title, i_num_songs)
+    print(f"{formatted_album}")
+
+    
+        
