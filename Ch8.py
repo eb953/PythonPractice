@@ -288,4 +288,44 @@ completed_models = []
 
 print_model(unprinted_designs, completed_models)
 show_completed_models(completed_models)
-    
+
+
+##Preventing a function from modifying a list -> passing the function a copy of the list, not the original. Any changes the function makes to the list will affect only the copy, leaving the original list intact. 
+
+function_name(list_name[:])
+
+##The slice notion [:] makes a copy of the list to ssend to the function. If we didn't want to empty the list of unprinted designs in printing_models.py we could call print_models() like this 
+
+print_models(unprinted_designs[:], completed_models) 
+
+##it uses a copy of the original unprinted designs list, not the actual unprinted_designs list. 
+
+##Try it yourself 
+
+"""def show_messages(messages):
+    for message in messages: 
+        msg = F"Hello, World this is {message}"
+        print(msg)
+text_message = ['eric','Max', 'will']
+show_messages(text_message)"""
+
+def send_messages(message, completed_messages):
+    while message: 
+        current_message = message.pop()
+        print(f"this is from, {current_message}")
+        completed_messages.append(current_message)
+        
+def final_message(completed_messages): 
+    print("\nThe following messages have been printed: ")
+    for completed_message in completed_messages:
+        print(completed_message)
+        
+message = ['John', 'Jacob', 'Jones']
+completed_messages = []
+
+send_messages(message[:], completed_messages)
+final_message(completed_messages)
+
+
+##adding [:] copies the message list despite being appended to completed message list 
+
