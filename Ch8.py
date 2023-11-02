@@ -351,3 +351,12 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese')
 ## the asterick in the parameter name *toppings tells python to make an empty tuple called toppings and pack whatever values it receives into this tuple 
 ## The print() call in the function body produces output showing that Python can handle a function call with one value and a call with three values 
 
+## Mixing Positional arbitrary arguments 
+## If you want a function to accept several different kinds of argumetns, the parameter that accepts an arbitrary number of arguments must be placed last  in the function definition 
+
+def make_pizza(size, *toppings): 
+     """print the list of toppigns that have been requested"""
+     print(f"\nMaking a {size} inch pizza with the following toppings: ")
+     for topping in toppings:
+         print(f" - {topping}")
+make_pizza(16, 'Anchovies', 'Artichoke', 'pepperoni')
