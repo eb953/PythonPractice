@@ -292,11 +292,11 @@ show_completed_models(completed_models)
 
 ##Preventing a function from modifying a list -> passing the function a copy of the list, not the original. Any changes the function makes to the list will affect only the copy, leaving the original list intact. 
 
-function_name(list_name[:])
+## function_name(list_name[:])
 
 ##The slice notion [:] makes a copy of the list to ssend to the function. If we didn't want to empty the list of unprinted designs in printing_models.py we could call print_models() like this 
 
-print_models(unprinted_designs[:], completed_models) 
+## print_models(unprinted_designs[:], completed_models) 
 
 ##it uses a copy of the original unprinted designs list, not the actual unprinted_designs list. 
 
@@ -360,3 +360,37 @@ def make_pizza(size, *toppings):
      for topping in toppings:
          print(f" - {topping}")
 make_pizza(16, 'Anchovies', 'Artichoke', 'pepperoni')
+
+##Using Arbitrary keyword arguments -> you can write functions that accept as many key-value pairs as the calling statement provides 
+
+def build_profile(first, last, **user_info): 
+    """Build a dictionary contatining everything we know about a user"""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('albert', 'einstein', 
+                             location = 'princeton', 
+                             field = 'physics')
+print(user_profile)
+    
+# using double astericks ** in **user_info creates an empty dictionary and can hold hold whatever name-value paris it receives into this dictionary 
+
+
+##Try it yourself 
+
+def make_sandwich(*items):
+    """print the list of items wanted in a sandwich"""
+    print(f"\nMaking a sandwich with the following items: ")
+    for item in items: 
+        print(f" - {item}")
+
+make_sandwich('salad', 'ham', 'swiss')
+
+def make_sandwich(length, *items):
+    """print the list of items wanted in a sandwich and its length"""
+    print(f"The length of the sandwitch is {length}in and will have the following items in it: ")
+    for item in items: 
+        print(f" - {item}")
+        
+make_sandwich(12, 'salad', 'ham', 'swiss')
