@@ -5,3 +5,4 @@ def make_pizza(size, *toppings):
     print(f"\nThe size of the pizza is {size} and the following toppings added: ")
     for topping in toppings:
         print(f" - {topping}")
+

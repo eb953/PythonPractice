@@ -1,6 +1,6 @@
 ##test out modules 
 
-import pizza 
+from pizza import make_pizza as mp
 
-pizza.make_pizza(13, 'pepperoni')
-pizza.make_pizza(13, 'pepperoni', 'anchovies', 'artichoke')
+mp(13, 'pepperoni')
+mp(13, 'pepperoni', 'anchovies', 'artichoke')
