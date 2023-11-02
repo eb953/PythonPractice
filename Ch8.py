@@ -329,3 +329,25 @@ final_message(completed_messages)
 
 ##adding [:] copies the message list despite being appended to completed message list 
 
+
+##Passing an Arbitrary Number of Arguments 
+
+def make_pizza(*toppings): 
+    """print the list of toppings that have been requested"""
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+
+def make_pizza(*toppings): 
+    """print the list of toppings that have been requested"""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(f" -{topping}")        
+make_pizza('Anchovies','Artichoke')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+## the asterick in the parameter name *toppings tells python to make an empty tuple called toppings and pack whatever values it receives into this tuple 
+## The print() call in the function body produces output showing that Python can handle a function call with one value and a call with three values 
+
