@@ -394,3 +394,20 @@ def make_sandwich(length, *items):
         print(f" - {item}")
         
 make_sandwich(12, 'salad', 'ham', 'swiss')
+
+def build_profile(first, last, **user_info):
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('Eric', 'Banavong', home = 'los angeles', age = 25)
+print(user_profile)
+
+
+def car_history(manufacturer, model_name, **car_info):
+    car_info['manufacturer'] = manufacturer
+    car_info['model_name'] = model_name
+    return car_info
+
+car_profile = car_history('Audi', 'Q5', color = 'silver', tow_package = True)
+print(car_profile)
