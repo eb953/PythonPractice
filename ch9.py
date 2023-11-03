@@ -71,3 +71,30 @@ Frida_restaurant = Restaurant('Frida', 'Hispanic')
 
 Frida_restaurant.open_restaurant()
 Eric_restaurant.describe_restaurant()
+
+
+class User: 
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.sex = sex 
+        self.location = location 
+    
+    def describe_user(self):
+        print(f"\nThe user's name is {self.first_name} {self.last_name}. ")
+        print(f"\n{self.first_name} {self.last_name} is {self.age} years old")
+        print(f"\n{self.first_name} {self.last_name} is {self.sex} and lives in {self.location}")
+    
+    def greet_user(self):
+        print(f"\nWe would like to extend a warm welcome to {self.first_name} {self.last_name}")
+    
+    
+Eric_B = User('Eric', 'Banavong', 25, 'Male', 'Los Angeles')
+Eric_B.describe_user()
+Eric_B.greet_user() 
+
+Frida_P = User('Frida', 'Pena', 24, 'Female', 'Pomona')
+Frida_P.describe_user()
+Frida_P.greet_user()
