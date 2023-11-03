@@ -95,6 +95,12 @@ Eric_B = User('Eric', 'Banavong', 25, 'Male', 'Los Angeles')
 Eric_B.describe_user()
 Eric_B.greet_user() 
 
+print("-----------------------------------------------------")
+
 Frida_P = User('Frida', 'Pena', 24, 'Female', 'Pomona')
 Frida_P.describe_user()
 Frida_P.greet_user()
+print("-----------------------------------------------------")
+Sam_B = User('Sam','Bryan', 30, 'Male', 'Irvine')
+Sam_B.greet_user()
+Sam_B.greet_user()
