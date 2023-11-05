@@ -104,3 +104,46 @@ print("-----------------------------------------------------")
 Sam_B = User('Sam','Bryan', 30, 'Male', 'Irvine')
 Sam_B.greet_user()
 Sam_B.greet_user()
+
+
+##Working with classes and Instances
+
+class Car: 
+    """Represent a car"""
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year 
+    
+    def get_descriptive_name(self):
+        """return a formatted descriptive name"""
+        long_name = f"{self.make} {self.model} {self.year}"
+        return long_name.title()
+my_new_car = Car('auid', 'a4', 2019)
+print(my_new_car.get_descriptive_name())
+
+##adding an attribute changes over time
+##setting a default value for an attribute -> when an instance is created, attributes can be defined without being passed in as paramters -> these attributes can be defined in the __init__ method where they are assigned a default value 
+
+class Car: 
+    """Represent a car"""
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year 
+        self.odometer_reading = 0 
+    
+    def get_descriptive_name(self):
+        """return a formatted descriptive name"""
+        long_name = f"{self.make} {self.model} {self.year}"
+        return long_name.title()
+    
+    def read_odometer(self):
+        """print a statement showing the car's mileage"""
+        print(f"This car has {self.odometer_reading} miles on it")
+my_new_car = Car('auid', 'a4', 2019)
+my_new_car.read_odometer()
+    
+    
+my_new_car = Car('auid', 'a4', 2019)
+print(my_new_car.get_descriptive_name())
