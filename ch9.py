@@ -267,3 +267,40 @@ my_used_car.read_odometer()
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
 
+
+##Try it yourself 
+class Restaurant: 
+    """Model a restuarant"""
+    def __init__(self, restaurant_name, cuisine_type): 
+        self.restaurant_name = restaurant_name
+        self.cusine_type = cuisine_type
+        self.numbers_served = 0
+        
+    def describe_restaurant(self):
+        print(f"The restaurant is called {self.restaurant_name}.")
+        
+    def open_restaurant(self):
+        print(f"\nThe restaurant is open and will be serving {self.cusine_type}.")
+        
+    def serving(self):
+        """print a statement showing the car's mileage"""
+        print(f"\nThis restaurant has served {self.numbers_served} people")
+    
+    def increment_number_served(self, served):
+        self.numbers_served += served
+        
+        
+my_restaurant = Restaurant('Jones', 'Italian')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+my_restaurant.numbers_served = 14
+my_restaurant.serving()
+my_restaurant.increment_number_served(2)
+my_restaurant.serving()
+
+my_restaurant = Restaurant('Jones', 'Italian')
+Eric_restaurant = Restaurant('Boiling Point', 'Seafood')
+Frida_restaurant = Restaurant('Frida', 'Hispanic')
+
+Frida_restaurant.open_restaurant()
+Eric_restaurant.describe_restaurant()
