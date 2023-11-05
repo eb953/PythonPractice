@@ -298,9 +298,48 @@ my_restaurant.serving()
 my_restaurant.increment_number_served(2)
 my_restaurant.serving()
 
-my_restaurant = Restaurant('Jones', 'Italian')
-Eric_restaurant = Restaurant('Boiling Point', 'Seafood')
-Frida_restaurant = Restaurant('Frida', 'Hispanic')
+##Try it yourself
+class User: 
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.sex = sex 
+        self.location = location 
+        self.login_attempts = 0 
+    
+    def describe_user(self):
+        print(f"\nThe user's name is {self.first_name} {self.last_name}. ")
+        print(f"\n{self.first_name} {self.last_name} is {self.age} years old")
+        print(f"\n{self.first_name} {self.last_name} is {self.sex} and lives in {self.location}")
+    
+    def greet_user(self):
+        print(f"\nWe would like to extend a warm welcome to {self.first_name} {self.last_name}")
+    
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+        print(F"{self.login_attempts} attempt has been made")
+        
+    def reset_login_attempts(self):
+       self.login_attempts = 0
+       print(f"The login attempts have been set to {self.login_attempts}")
+        
 
-Frida_restaurant.open_restaurant()
-Eric_restaurant.describe_restaurant()
+    
+Eric_B = User('Eric', 'Banavong', 25, 'Male', 'Los Angeles')
+Eric_B.describe_user()
+Eric_B.greet_user() 
+Eric_B.login_attempts = 0
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.increment_login_attempts()
+Eric_B.reset_login_attempts()
+
+
+
+
