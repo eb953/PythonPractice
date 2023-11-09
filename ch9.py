@@ -475,6 +475,120 @@ class Restaurant:
 class IceCreamStand(Restaurant):
     def __init__(self, restaurant_name, cuisine_type):
         super().__init__(restaurant_name, cuisine_type)
-        self.flavors = []
-        print(f"{self.flavors}")
+        self.flavors = ['Vanilla', 'Chocolate', 'Strawbbery']
         
+    def get_flavors(self):
+        print(f"The flavors from the ice cream stand are {self.flavors}")
+
+my_restaurant = IceCreamStand('Jones', 'Italian')
+my_restaurant.get_flavors() 
+
+
+##Try it
+class User: 
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.sex = sex 
+        self.location = location 
+        self.login_attempts = 0 
+    
+    def describe_user(self):
+        print(f"\nThe user's name is {self.first_name} {self.last_name}. ")
+        print(f"\n{self.first_name} {self.last_name} is {self.age} years old")
+        print(f"\n{self.first_name} {self.last_name} is {self.sex} and lives in {self.location}")
+    
+    def greet_user(self):
+        print(f"\nWe would like to extend a warm welcome to {self.first_name} {self.last_name}")
+    
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+        print(F"{self.login_attempts} attempt has been made")
+        
+    def reset_login_attempts(self):
+       self.login_attempts = 0
+       print(f"The login attempts have been set to {self.login_attempts}")
+
+
+class Admin(User):
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        super().__init__(first_name, last_name, age, sex, location)
+        self.privledges = []
+        
+    def show_privledges(self):
+        print("\nPrivledges: ")
+        for privledge in self.privledges:
+            print("- " + privledge)
+        
+        
+        
+Eric_B = Admin('Eric', 'Banavong', 25, 'Male', 'Los Angeles')
+Eric_B.privledges = ['Can reset passwords', 'can moderate discussions', 'can suspend accounts']
+Eric_B.show_privledges() 
+
+##
+
+class User: 
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.sex = sex 
+        self.location = location 
+        self.login_attempts = 0 
+    
+    def describe_user(self):
+        print(f"\nThe user's name is {self.first_name} {self.last_name}. ")
+        print(f"\n{self.first_name} {self.last_name} is {self.age} years old")
+        print(f"\n{self.first_name} {self.last_name} is {self.sex} and lives in {self.location}")
+    
+    def greet_user(self):
+        print(f"\nWe would like to extend a warm welcome to {self.first_name} {self.last_name}")
+    
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+        print(F"{self.login_attempts} attempt has been made")
+        
+    def reset_login_attempts(self):
+       self.login_attempts = 0
+       print(f"The login attempts have been set to {self.login_attempts}")
+
+class Admin(User):
+    
+    def __init__(self, first_name, last_name, age, sex, location):
+        super().__init__(first_name, last_name, age, sex, location)
+        self.privileges = privileges() 
+
+class privileges():
+    def __init__(self, privileges = []):
+        self.privilege = privileges
+    
+    def show_privileges(self):
+        print("\nPrivileges: ")
+        if self.privilege:
+            for privilege in self.privilege:
+              print("- " + privilege)
+        else:
+            print("- This user has no privileges")
+    
+
+
+        
+        
+Eric_B = Admin('Eric', 'Banavong', 25, 'Male', 'Los Angeles')
+##Eric_B.privileges = ['Can reset passwords', 'can moderate discussions', 'can suspend accounts']
+Eric_B.privileges.show_privileges()
+
+print("\nAdding privileges...")
+eric_privileges = [
+    'can reset passwords',
+    'can moderate discussions',
+    'can suspend accounts',
+    ]
+
+Eric_B.privileges.privilege = eric_privileges
+Eric_B.privileges.show_privileges() 
