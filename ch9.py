@@ -342,5 +342,139 @@ Eric_B.reset_login_attempts()
 
 
 
+#Inheritance - when one class inherits from another, it takes on the attributes and methods of the first class. The original class is called the parent class, and the new class is the child class - the child class can inherit any or all of the attributes and methods of its parent classs, but it's also free to define new attributes and methods of its own 
 
 
+class Car: 
+    """Represent a car"""
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year  
+        self.odometer_reading = 0 
+    
+    def get_descriptive_name(self):
+        """return a formatted descriptive name"""
+        long_name = f"{self.make} {self.model} {self.year}"
+        return long_name.title()
+    
+    def read_odometer(self):
+        """print a statement showing the car's mileage"""
+        print(f"This car has {self.odometer_reading} miles on it")
+        
+    def update_odometer(self, mileage): ## adding method to update certain attributes 
+        """Set the odometer reading to the given value. Reject the change if it attempts to roll the odometer back"""
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage 
+        else:
+            print("You can't roll back an odometer")
+    
+    def increment_odometer(self, miles):
+        """add the given amount to the odometer reading"""
+        self.odometer_reading += miles
+            
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles"""
+    
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+
+##the super() function at is a special function that allows you to call a method from the parent class
+#Defining attributes and methods for the child classs
+
+
+class Car: 
+    """Represent a car"""
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year  
+        self.odometer_reading = 0 
+        self.gas_tank = 100
+    def get_descriptive_name(self):
+        """return a formatted descriptive name"""
+        long_name = f"{self.make} {self.model} {self.year}"
+        return long_name.title()
+    
+    def read_odometer(self):
+        """print a statement showing the car's mileage"""
+        print(f"This car has {self.odometer_reading} miles on it")
+        
+    def update_odometer(self, mileage): ## adding method to update certain attributes 
+        """Set the odometer reading to the given value. Reject the change if it attempts to roll the odometer back"""
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage 
+        else:
+            print("You can't roll back an odometer")
+    
+    def increment_odometer(self, miles):
+        """add the given amount to the odometer reading"""
+        self.odometer_reading += miles
+    
+    def fill_gas_tank(self):
+        print(f"The gas tank is now set to {self.gas_tank}")
+        
+class Battery: 
+    def __init__(self, battery_size = 75):
+        self.battery_size = battery_size
+        
+        
+    def describe_battery(self):
+        print(f"this car has a {self.battery_size} - kwh battery")
+        
+    def get_range(self):
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        
+        print(f"This car can go about {range} miles on a full charge")
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+       super().__init__(make, model, year)
+       self.battery = Battery() 
+   
+    def fill_gas_tank(self):
+        print("This car doesn't needa a gas tank") 
+   
+        
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.battery_size = 75
+my_tesla.fill_gas_tank()
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+
+
+
+##Try it yourself 
+class Restaurant: 
+    """Model a restuarant"""
+    def __init__(self, restaurant_name, cuisine_type): 
+        self.restaurant_name = restaurant_name
+        self.cusine_type = cuisine_type
+        self.numbers_served = 0
+        
+    def describe_restaurant(self):
+        print(f"The restaurant is called {self.restaurant_name}.")
+        
+    def open_restaurant(self):
+        print(f"\nThe restaurant is open and will be serving {self.cusine_type}.")
+        
+    def serving(self):
+        """print a statement showing the car's mileage"""
+        print(f"\nThis restaurant has served {self.numbers_served} people")
+    
+    def increment_number_served(self, served):
+        self.numbers_served += served
+
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
+        print(f"{self.flavors}")
+        
