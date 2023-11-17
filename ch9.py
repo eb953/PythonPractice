@@ -592,3 +592,32 @@ eric_privileges = [
 
 Eric_B.privileges.privilege = eric_privileges
 Eric_B.privileges.show_privileges() 
+
+from random import randint
+randint(1,6)
+
+from random import choice 
+players = ['Eric', 'Max', 'Nathan', 'Arlena']
+first_up = choice(players)
+first_up
+
+
+##Try it yourself 
+
+from random import randint
+class die: 
+    def __init__(self,sides = 10):
+        self.sides = sides
+    
+    def roll_die(self):
+        return randint(1, self.sides)
+
+my_die = die()
+
+results = [] 
+
+for roll_num in range(20):
+    result = my_die.roll_die()
+    results.append(result)
+print("20 rolls of a 10-sided die:")
+print(results)
