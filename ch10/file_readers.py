@@ -63,3 +63,17 @@ if birthday in pi_string:
     print("Your birthday appears in the first million digits of pi ")
 else:
     print("Your birthday does not appear in the first million digits of pi")
+
+
+
+filename = 'learning_python.txt'
+with open(filename) as file_object: 
+    content = file_object.read() 
+    print(content.strip())
+
+
+#For loop -> write a program that reads the file and prints what you wrote 3 times 
+filename = 'learning_python.txt'
+with open(filename) as file_object: 
+    for line in file_object: 
+        print(line.rstrip())
