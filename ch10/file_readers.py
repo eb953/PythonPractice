@@ -77,3 +77,13 @@ filename = 'learning_python.txt'
 with open(filename) as file_object: 
     for line in file_object: 
         print(line.rstrip())
+
+## storing the lines in a list then work outside of with block 
+
+filename = 'learning_python.txt'
+
+with open(filename) as f: 
+    contents = f.readlines()
+
+for content in contents:
+    print(content.rstrip())
