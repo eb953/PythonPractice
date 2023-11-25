@@ -92,3 +92,12 @@ for content in contents:
 ## 
 message = "I really like dogs"
 message.replace('dog', 'cat')
+
+##Writing to an empty file
+
+filename = 'programming.txt'
+
+with open(filename, 'w') as file_object: 
+    file_object.write("I love programming.")
+
+#open() in the above example has 2 arguments. The first argument is still the name of the file we want to open. The second argument 'w' tells python that we want to opoen the file in WRITE mode. You can open a file in read mode ('r') write mode ('w') and append mode ('a') or a mode that allows you to read and write ('r+') If you omit the mode argument Python opens the file in read only mode by default. Be careful!! If open the file in write mode and there is already content in it, it will erase everything before returning the new edits
