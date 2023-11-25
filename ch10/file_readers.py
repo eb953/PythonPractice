@@ -87,3 +87,8 @@ with open(filename) as f:
 
 for content in contents:
     print(content.rstrip())
+
+
+## 
+message = "I really like dogs"
+message.replace('dog', 'cat')
