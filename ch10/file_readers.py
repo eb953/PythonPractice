@@ -98,6 +98,17 @@ message.replace('dog', 'cat')
 filename = 'programming.txt'
 
 with open(filename, 'w') as file_object: 
-    file_object.write("I love programming.")
+    file_object.write("I love programming. \n")
+    file_object.write("I love creating neew games. \n")
 
-#open() in the above example has 2 arguments. The first argument is still the name of the file we want to open. The second argument 'w' tells python that we want to opoen the file in WRITE mode. You can open a file in read mode ('r') write mode ('w') and append mode ('a') or a mode that allows you to read and write ('r+') If you omit the mode argument Python opens the file in read only mode by default. Be careful!! If open the file in write mode and there is already content in it, it will erase everything before returning the new edits
+#when adding multiple lines the string will squish together so adding \n helps 
+
+#open() in the above example has 2 arguments. The first argument is still the name of the file we want to open. The second argument 'w' tells python that we want to open the file in WRITE mode. You can open a file in read mode ('r') write mode ('w') and append mode ('a') or a mode that allows you to read and write ('r+') If you omit the mode argument Python opens the file in read only mode by default. Be careful!! If open the file in write mode and there is already content in it, it will erase everything before returning the new edits
+
+#appending will open and add to a file without erasing and replacing the contents 
+
+filename = 'programming.txt'
+
+with open(filename, 'a') as file_object: 
+    file_object.write("I also love finding meaning in dew datasets. \n")
+    file_object.write("I creating new apps and running it in a broswer. \n")
