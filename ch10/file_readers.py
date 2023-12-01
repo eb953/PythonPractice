@@ -176,3 +176,20 @@ with open(filename, 'a') as f:
 
 
 
+##analyzing text 
+
+title = "Alice in Wonderland"
+title.split()
+
+#The split() method separates a string into parts wherever it finds a space and stores all the parts of the string in a list 
+
+filename = 'alice.txt'
+try:
+    with open(filename, encoding='utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print(f"Sorry, the file {filename} does not exist")
+else:
+    words = contents.split()
+    num_words = len(words)
+    print(f"The file {filename} has about {num_words} words")
