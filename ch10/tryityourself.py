@@ -32,3 +32,42 @@ while True:
     except ValueError:
         pass
     print(answer)
+
+    ##Cats and Dogs 10-8
+
+with open ('cats.txt', 'w') as c:
+    c.write("Tokyo\n")
+    c.write("snowy\n")
+    c.write("smokey\n")
+
+with open('dogs.txt', 'w') as d:
+    d.write("cinammon\n")
+    d.write("bailey\n")
+    d.write("blue\n")
+
+##
+def printFiles(filename):
+    """open and read files"""
+    try:
+        with open(filename, 'r') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        print("The file does not exist!")
+
+filenames = ['cats.txt', 'dogs.txt']
+for filename in filenames:
+    printFiles(filename) 
+##above is incorrect 
+
+##below is answer
+filenames = ['cats.txt', 'dogs.txt']
+
+for filename in filenames:
+    print(f"\nReading file: {filename}")
+    try:
+        with open(filename) as f:
+            contents = f.read()
+            print(contents)
+    except FileNotFoundError:
+        print("  Sorry, I can't find that file.")
+
