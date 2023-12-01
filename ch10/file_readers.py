@@ -112,3 +112,13 @@ filename = 'programming.txt'
 with open(filename, 'a') as file_object: 
     file_object.write("I also love finding meaning in dew datasets. \n")
     file_object.write("I creating new apps and running it in a broswer. \n")
+
+##Try it yourself 
+
+
+User = input("What is your name: ")
+filename = 'guest.txt'
+with open(filename, 'w') as file_object:
+    file_object.write(f"{User} \n")
+
+##Try it yourself
