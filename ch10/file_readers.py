@@ -134,3 +134,41 @@ while True:
         with open(filename, 'a') as file_object:
             file_object.write(f"{name}\n")
         print(f"Hi, {name}, you've been added to the guest book")
+
+##Try it yourself 10-5
+
+filename = 'poll.txt'
+print("Enter 'quit' when you are finished")
+
+reasons =[]
+while True: 
+    name = input("\nWhat is your name")
+    if name == 'quit':
+        break 
+    elif name != 'quit': 
+        reasons.append(name)
+        reason = input(f"{name}, why do you like programming?\n")
+        reasons.append(reason)
+        
+with open(filename, 'a') as file_object: 
+    for reason in reasons:
+        file_object.write(f"{name}, your recorded resonse is {reason}\n")
+## does not work :(
+
+
+
+
+filename = 'programming_poll.txt'
+
+responses = []
+while True:
+    response = input("\nWhy do you like programming? ")
+    responses.append(response)
+
+    continue_poll = input("Would you like to let someone else respond? (y/n) ")
+    if continue_poll != 'y':
+        break
+
+with open(filename, 'a') as f:
+    for response in responses:
+        f.write(f"{response}\n")
