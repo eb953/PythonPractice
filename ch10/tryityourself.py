@@ -99,4 +99,25 @@ def countWords(filename):
 
 filename = 'alice.txt',
 countWords(filename)
-        
+
+
+
+
+##10-11 Favorite number 
+import json
+
+user = input("what is your favorite number?")
+
+filename = 'favoriteNumbers.json'
+
+with open(filename, 'w') as f:
+    json.dump(user, f)
+    print(f"I know your favorite number is {user}")
+
+#Load and read favorite number
+
+import json 
+filename = 'favoriteNumbers.json'
+with open (filename) as f:
+    number = json.load(f)
+print(f"I know your favorite number is {number}")
