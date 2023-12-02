@@ -121,3 +121,42 @@ filename = 'favoriteNumbers.json'
 with open (filename) as f:
     number = json.load(f)
 print(f"I know your favorite number is {number}")
+
+
+##10-12 Favorite number remembered 
+
+import json
+def retrieveUserNumber():
+    filename = 'favoriteNumbers.json'
+    try:
+        with open(filename) as f:
+            user = json.load(f)
+    except FileNotFoundError:
+        return None
+    else:
+        return user
+retrieveUserNumber()
+
+def promptUserNumber():
+    filename = 'favoriteNumbers.json'
+    user = input("What is your favorite number?")
+
+    with open(filename, 'w') as f:
+        number = json.dump(user, f)
+        print(f"I know your favorite number is {number}")
+promptUserNumber()
+    
+##promptusername  incorrect
+
+import json
+
+try:
+    with open('favorite_number.json') as f:
+        number = json.load(f)
+except FileNotFoundError:
+    number = input("What's your favorite number? ")
+    with open('favorite_number.json', 'w') as f:
+        json.dump(number, f)
+    print("Thanks, I'll remember that.")
+else:
+    print(f"I know your favorite number! It's {number}.")
