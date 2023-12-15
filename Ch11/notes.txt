@@ -1,0 +1,11 @@
+Assert methods available from the unittest Module
+
+assertEqual(a,b) -> verifty that a==b
+assertNotEqual(a,b) -> Verify that A!=b
+assertTrue(x) -> Verify that x is True 
+assertFalse(x) -> Verify that x is assertFalse
+assertIn(item, list) -> Verify that item is in list 
+assertNotIn(item, list) -> Verify that item is not in list 
+
+
+reference: survey.py and language survey on how to test a class 
