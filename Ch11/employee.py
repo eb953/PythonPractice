@@ -1,4 +1,4 @@
-class Employee:
+class EmployeeInfo:
     def __init__(self, first_name, last_name, salary):
         """Initialize attributes"""
         self.first_name = first_name
