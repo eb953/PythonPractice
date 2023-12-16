@@ -9,3 +9,7 @@ assertNotIn(item, list) -> Verify that item is not in list
 
 
 reference: survey.py and language survey on how to test a class 
+
+
+Setup() Method -
+the unittest.testcase class has a setup() that allows you to create these objects once and then use them in each of your test methods. When you include a setUp() method in a testcase class, python runs the setUp() method before running each method starting with test_. Any o0bjects created in the setup() method are then availabel in each test method you write
